@@ -1,0 +1,121 @@
+<aura:component extends="forceCommunity:navigationMenuBase">
+    <aura:attribute name="isMobileMenuVisible" type="Boolean" default='false'/>
+
+    <div class="slds-grid slds-grid--align-left">
+        <div class="slds-col nav_bar_desktop">
+            <div class="slds-grid slds-grid--vertical">
+                <div class="slds-col">
+                    <a class="logo" rel="index" href="https://omdeshmukh-developer-edition.ap17.force.com/portfolio/s/">
+                        <img src="/sfsites/c/file-asset/PortfolioLogo1"
+                            alt="Salesforce Developer Logo, Web Developer Logo , Full Stack Developer Logo" />
+                    </a>
+                    
+                    <nav>
+                        <ul onclick="{!c.onClick}">
+                            <aura:iteration items="{!v.menuItems}" var="item">
+                                <li>
+                                    <aura:if isTrue="{!item.label == 'Home'}">
+                                        <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                            <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                                iconName="utility:home" alternativeText="Home" size="small"></lightning:icon>
+                                        </a>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.label == 'About Me'}">
+                                        <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                            <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                                iconName="utility:identity" alternativeText="About Me" size="small"></lightning:icon>
+                                        </a>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.label == 'Skill'}">
+                                        <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                            <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                                iconName="utility:lightning_extension" alternativeText="Skill" size="small">
+                                            </lightning:icon>
+                                        </a>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.label == 'Work'}">
+                                        <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                            <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                                iconName="utility:work_order_type" alternativeText="Work" size="small"></lightning:icon>
+                                        </a>
+                                    </aura:if>
+                                    <aura:if isTrue="{!item.label == 'Contact'}">
+                                        <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                            <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                                iconName="utility:contact_request" alternativeText="Contact" size="small"></lightning:icon>
+                                        </a>
+                                    </aura:if>
+                                </li>
+                            </aura:iteration>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-nav-menu">
+        <div class="slds-grid slds-grid--align-left">
+            <div class="slds-col nav_bar_mobile">
+                <div class="slds-grid slds-grid--vertical">
+                    <div class="slds-col">
+                        <a class="logo_mobile" rel="index"
+                            href="https://omdeshmukh-developer-edition.ap17.force.com/portfolio/s/">
+                            <img class="img_mobile" src="/sfsites/c/file-asset/PortfolioLogo1"
+                                alt="Salesforce Developer Logo, Web Developer Logo , Full Stack Developer Logo" />
+                        </a>
+                        <a href="javascript:void(0);" class="mobile-menu" onclick="{!c.mobileMenu}">
+                            <lightning:icon iconName="utility:rows" alternativeText="Menu" size="midium">
+                            </lightning:icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="mobile-nav" aura:id="mobileMenu">
+            <ul onclick="{!c.onClick}">
+                <aura:iteration items="{!v.menuItems}" var="item">
+                    <li>
+                        <aura:if isTrue="{!item.label == 'Home'}">
+                            <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                    iconName="utility:home" alternativeText="Home" size="small">
+                                </lightning:icon>
+                            </a>
+                        </aura:if>
+                        <aura:if isTrue="{!item.label == 'About Me'}">
+                            <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                    iconName="utility:identity" alternativeText="About Me" size="small">
+                                </lightning:icon>
+                            </a>
+                        </aura:if>
+                        <aura:if isTrue="{!item.label == 'Skill'}">
+                            <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                    iconName="utility:lightning_extension" alternativeText="Skill" size="small">
+                                </lightning:icon>
+                            </a>
+                        </aura:if>
+                        <aura:if isTrue="{!item.label == 'Work'}">
+                            <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                    iconName="utility:work_order_type" alternativeText="Work" size="small">
+                                </lightning:icon>
+                            </a>
+                        </aura:if>
+                        <aura:if isTrue="{!item.label == 'Contact'}">
+                            <a href="javascript:void(0);" data-menu-item-id="{!item.id}">
+                                <lightning:icon class="{!item.active ? 'active-button' : 'hover-button'}"
+                                    iconName="utility:contact_request" alternativeText="Contact" size="small">
+                                </lightning:icon>
+                            </a>
+                        </aura:if>
+                    </li>
+                </aura:iteration>
+            </ul>
+        </nav>
+    </div>
+
+</aura:component>

@@ -1,0 +1,72 @@
+.main-container.THIS {
+    width: 100%;
+}
+
+.THIS.c-container {
+    border: 1px solid #d8dde6;
+    margin: 10px 0 20px 0;
+}
+.THIS .large {
+    height: 200px;
+}
+.THIS .x-large {
+    height: 300px;
+}
+.THIS .custom-box {
+    text-align: center;
+    padding: 1rem;
+    color: #d8dde6;
+}
+
+.THIS .about-me_content{
+    left: 60px;
+    position: relative;
+    width: 80%;
+    font-size: 14px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #ebe5e5;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+ 
+.THIS .heading-class{
+    left: 60px; 
+    color: #08fdd8;
+    position: relative;
+    max-width: 80%;
+    font-size: 45px;
+    font-weight: 550;
+}
+
+.THIS p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+@media screen and (max-width: 767px) {
+    .main-container.THIS {
+        width: 100% !important;
+        top: 60px; 
+        position: relative;
+    }
+
+    .THIS .custom-box{
+        left: 0;
+        position: relative;
+    }
+
+    .THIS .heading-class{
+        left: 0; 
+        position: relative;
+    }
+
+    .THIS .about-me_content{
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+}

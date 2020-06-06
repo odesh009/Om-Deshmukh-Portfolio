@@ -1,0 +1,62 @@
+.THIS .name-styler {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 65px;
+  letter-spacing: 1px;
+  word-spacing: 0.2px;
+  font-weight: 400;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.THIS .type-intro{
+  text-align: center;
+  color: #08fdd8;
+  font-size: 25px;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: -0.4px;
+  word-spacing: -1px;
+  display: block;
+}
+
+.THIS .name-holder{
+  position: absolute; 
+  width: 100%; 
+  top: 40%;
+  animation: scale 1.5s ease;
+}
+
+.THIS .first-color {
+  color: #08fdd8;
+  transition: all 0.4s ease;
+}
+
+.THIS .second-color {
+  color: #dddddd;
+}
+
+.THIS canvas {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  animation: scale 1.5s ease;
+} 
+
+/* ---- particles.js container ---- */
+.particles-js.THIS{
+  width: 100%; 
+  height: 100%; 
+  background-color: #1a1a1a;
+  text-align: center;
+  position: fixed;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.6);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

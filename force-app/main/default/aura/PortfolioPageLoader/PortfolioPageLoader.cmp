@@ -1,0 +1,8 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,force:appHostable" access="global">
+    <lightning:card>
+        <div class="loading">
+            <c:svgIcon class="svg-class" xlinkHref="/resource/pulsar.svg#pulsar">
+            </c:svgIcon>
+        </div>
+    </lightning:card>    
+</aura:component>

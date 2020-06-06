@@ -1,0 +1,11 @@
+<aura:component implements="forceCommunity:themeLayout">
+
+    <div class="body-class">
+        <div class="nav_bar">
+            <c:portfolioVerticalNavBar></c:portfolioVerticalNavBar>
+        </div>
+        <div class="page" >
+           <c:PortfolioIntroContainer></c:PortfolioIntroContainer>
+        </div>
+    </div>
+</aura:component>

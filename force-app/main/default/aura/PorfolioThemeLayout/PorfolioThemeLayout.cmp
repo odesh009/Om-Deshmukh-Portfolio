@@ -1,0 +1,11 @@
+<aura:component implements="forceCommunity:themeLayout">
+    <aura:attribute name="search" type="Aura.Component[]" />
+    <aura:attribute name="sidebarFooter" type="Aura.Component[]" />
+    <div class="slds-col">
+        <c:PortfolioVerticalNav></c:PortfolioVerticalNav>
+    </div>
+    <div class="slds-col content" style="height: 100%;
+    position: relative;">
+        {!v.body}
+    </div>
+</aura:component>

@@ -1,0 +1,17 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <ltng:require scripts='{!$Resource.typed}' afterScriptsLoaded="{!c.handleTypedJS}" />
+    <ltng:require scripts='{!$Resource.particles}' afterScriptsLoaded="{!c.loadParticles}" />
+    
+    <div id="particles-js" class="particles-js">
+        <div class="name-holder">
+            <div class="name-styler">
+                <span class="first-color">Om </span>
+                <span class="second-color">Deshmukh</span>
+            </div>
+            <div class="type-intro">
+                <span class="second-color">I'm </span><span id="typed"></span>
+            </div>
+        </div>
+        <canvas class="particles-js-canvas-el"></canvas>
+    </div>
+</aura:component>

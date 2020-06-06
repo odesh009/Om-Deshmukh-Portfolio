@@ -1,0 +1,69 @@
+.body-class.THIS{
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.THIS .page{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.THIS .nav_bar{
+  background: #151515;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  min-height: 500px;
+}
+
+.THIS body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+  height: 100%;
+  width: 100%;
+}
+
+
+.THIS canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+} 
+
+/* ---- particles.js container ---- */
+.particles-js.THIS {
+  position: absolute; 
+  width: 100%; 
+  height: 100%; 
+  background-color: #1a1a1a;
+}
+
+.THIS .inline-block {
+  display: table-cell;
+  border: 1px solid red; 
+}
+
+.THIS .bodycontent{
+    height: 100%;
+    width: 100%;
+    float: left;
+    animation: scale 1.5s ease;
+}
+
+@keyframes scale {
+    0%   {transform: scale(.6);}
+    100% {transform: scale(1);}
+}
+
+.THIS .particles-js-canvas-el{
+  width: 100%; 
+  height: 100%; 
+  position: relative; 
+  animation: scale 1.5s ease;
+}

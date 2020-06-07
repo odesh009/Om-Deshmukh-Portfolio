@@ -15,7 +15,7 @@
                         </p>
                         <p align="LEFT">Well-organised person, problem solver with high attention to detail. .</p>
                         <p align="LEFT">Interested in the entire Salesforce ecosystem, Blockchain and working on ambitious projects with positive people.</p>
-                        
+                        <!--
                         <lightning:layout multipleRows="true" class="slds-p-top_small">
                             <lightning:layoutItem size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" flexibility="shrink" class="slds-p-right_small slds-p-top_small">
                                 <img src="{!$Resource.CertificateLogo + '/CertificateLogo/Admin.jpg'}"/>
@@ -39,6 +39,12 @@
                                 <img src="{!$Resource.CertificateLogo + '/CertificateLogo/Admin.jpg'}" />
                             </lightning:layoutItem>
                         </lightning:layout>
+                        -->
+                        <div class="box-3">
+                            <div class="btn btn-three">
+                                <span>Download Resume</span>
+                            </div>
+                        </div>
                     </div>
                 </lightning:layoutItem>
                 <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="4" largeDeviceSize="4">

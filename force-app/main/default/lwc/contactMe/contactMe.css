@@ -1,0 +1,20 @@
+.custom-box{
+    padding: 0px;;
+}
+
+.cb-section_column{
+    padding: 0px;
+}
+
+.c-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+input{
+    background-color: #2b2b2b;
+    color: #8d8d8d;
+    border: 0px;
+    border-radius: 0;
+}

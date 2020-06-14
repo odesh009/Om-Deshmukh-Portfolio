@@ -1,0 +1,26 @@
+<template>
+    <div class="c-container">
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <div class="custom-box slds-text-align_center" style="left:10%; top:50%; width:32%; position: absolute;">
+                    <lightning-input placeholder="Name" class="inputBox" style="border:0px; border-radius: 0;"></lightning-input>
+                    <lightning-input placeholder="Phone" class="inputBox"></lightning-input>
+                    <lightning-input placeholder="Email" class="inputBox"></lightning-input>
+                    <lightning-textarea placeholder="" class="inputBox"></lightning-textarea>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
+                <div class="custom-box slds-text-align_center">
+                    <lightning-map
+                        map-markers = {mapMarkers}
+                        center = {center}
+                        zoom-level = {zoomLevel}
+                        markers-title = {markersTitle}
+                        show-footer = {showFooter}
+                        list-view = {listView}>
+                    </lightning-map>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+    </div>
+</template>

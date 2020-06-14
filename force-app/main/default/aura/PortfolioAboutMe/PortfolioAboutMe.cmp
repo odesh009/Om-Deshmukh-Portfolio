@@ -7,7 +7,7 @@
                 <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="8" largeDeviceSize="8">
                     <div class="custom-box about-me_content">
                         <p align="LEFT" style="font-size: 25px; font-weight: 500">
-                            I'm <span style="color: #08fdd8;">Salesforce</span> expert based in <span style="color: #08fdd8;">Pune</span>, India
+                            I'm <span style="color: #08fdd8;">Salesforce</span> developer based in <span style="color: #08fdd8;">Pune</span>, India
                         </p>
                         <p align="LEFT">5+ years of experience as Salesforce, Lightning and Full Stack Developer with a demonstrated history of working in the information technology and services industry. 6x Salesforce certified, CPQ Professional.</p>
                         <p align="LEFT">

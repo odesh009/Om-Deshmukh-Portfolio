@@ -18,3 +18,19 @@ input{
     border: 0px;
     border-radius: 0;
 }
+
+.mapClass{
+    height: 100% !important;
+    position: fixed !important;
+    width: 50% !important;
+}
+
+.heading-class{
+    left: 18%; 
+    color: #08fdd8;
+    position: relative;
+    max-width: 80%;
+    font-size: 45px;
+    font-weight: 550;
+}
+

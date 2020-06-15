@@ -1,24 +1,67 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api, track } from 'lwc';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import saveContact from '@salesforce/apex/PortfolioContactControlller.saveContactRecord';
 
-import NAME_FIELD from '@salesforce/schema/Contact.Name';
+import FIRSTNAME_FIELD from '@salesforce/schema/Contact.FirstName';
+import LASTNAME_FIELD from '@salesforce/schema/Contact.LastName';
 import MOBILE_FIELD from '@salesforce/schema/Contact.MobilePhone';
 import EMAIL_FIELD from '@salesforce/schema/Contact.Email';
 import DESCRIBE_FIELD from '@salesforce/schema/Contact.Description';
 
 export default class RecordFormCreateExample extends LightningElement {
     // objectApiName is "Account" when this component is placed on an account record page
-    @api objectApiName = 'Contact';
+    @track error;
+    @track contactRecord = {
+        FirstName: FIRSTNAME_FIELD,
+        LastName: LASTNAME_FIELD,
+        MobilePhone: MOBILE_FIELD,
+        Email: EMAIL_FIELD,
+        Description: ''
+    };
 
-    fields = [NAME_FIELD, MOBILE_FIELD, EMAIL_FIELD, DESCRIBE_FIELD];
+    handleFirstNameChange(event) {
+        this.contactRecord.FirstName = event.target.value;
+    }
 
-    handleSuccess(event) {
-        const evt = new ShowToastEvent({ 
-            title: "Account created",
-            message: "Record ID: " + event.detail.id,
-            variant: "success"
+    handleLastNameChange(event) {
+        this.contactRecord.LastName = event.target.value;
+    }
+
+    handlePhoneChange(event) {
+        this.contactRecord.MobilePhone = event.target.value;
+    }
+
+    handleEmailChange(event) {
+        this.contactRecord.Email = event.target.value;
+    }
+
+    handleDescribeChange(event) {
+        this.contactRecord.Description = event.target.value;
+    }
+
+
+    handleSave() {
+        console.log('Save contact');
+        saveContact({ objContact: this.contactRecord })
+        .then(result => {
+            // Clear the user enter values
+            this.contactRecord = {};
+
+            // Show success messsage
+            this.dispatchEvent(new ShowToastEvent({
+                message: 'Thank you for contacting me! I will get back to you soon.',
+                variant: 'success',
+                mode: 'pester',
+            }));
+        })
+        .catch(error => {
+            console.log('Error :' + error.body.message);
+            this.dispatchEvent(new ShowToastEvent({
+                message: error.body.message,
+                variant: 'error',
+                mode: 'pester',
+            }));
         });
-        this.dispatchEvent(evt);
     }
 
     mapMarkers = [
@@ -43,6 +86,6 @@ export default class RecordFormCreateExample extends LightningElement {
         },
     };
 
-    zoomLevel = 8;
+    zoomLevel = 6;
     showFooter = false;
 }

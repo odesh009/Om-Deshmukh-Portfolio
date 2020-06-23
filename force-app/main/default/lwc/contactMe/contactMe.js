@@ -12,10 +12,10 @@ export default class RecordFormCreateExample extends LightningElement {
     // objectApiName is "Account" when this component is placed on an account record page
     @track error;
     @track contactRecord = {
-        FirstName: FIRSTNAME_FIELD,
-        LastName: LASTNAME_FIELD,
-        MobilePhone: MOBILE_FIELD,
-        Email: EMAIL_FIELD,
+        FirstName: '',
+        LastName: '',
+        MobilePhone: '',
+        Email: '',
         Description: ''
     };
 
@@ -41,27 +41,33 @@ export default class RecordFormCreateExample extends LightningElement {
 
 
     handleSave() {
-        console.log('Save contact');
-        saveContact({ objContact: this.contactRecord })
-        .then(result => {
-            // Clear the user enter values
-            this.contactRecord = {};
+        console.log('Save contact ' + this.contactRecord.LastName );
+        if (this.contactRecord.LastName != '' && this.contactRecord.LastName != undefined){
+            saveContact({ objContact: this.contactRecord })
+                .then(result => {
+                    // Clear the user enter values
+                    this.contactRecord = {};
 
-            // Show success messsage
-            this.dispatchEvent(new ShowToastEvent({
-                message: 'Thank you for contacting me! I will get back to you soon.',
-                variant: 'success',
-                mode: 'pester',
-            }));
-        })
-        .catch(error => {
-            console.log('Error :' + error.body.message);
-            this.dispatchEvent(new ShowToastEvent({
-                message: error.body.message,
-                variant: 'error',
-                mode: 'pester',
-            }));
-        });
+                    // Show success messsage
+                    this.dispatchEvent(new ShowToastEvent({
+                        message: 'Thank you for contacting me! I will get back to you soon.',
+                        variant: 'success',
+                        mode: 'pester',
+                    }));
+                })
+                .catch(error => {
+                    console.log('Error :' + error.body.message);
+                    this.dispatchEvent(new ShowToastEvent({
+                        message: error.body.message,
+                        variant: 'error',
+                        mode: 'pester',
+                    }));
+                });
+        }else{
+            console.log('LastName');
+            console.log(this.template.querySelector('input').innerHTML);
+            this.template.querySelector('input#LastName');
+        }
     }
 
     mapMarkers = [

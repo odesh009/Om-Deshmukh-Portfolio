@@ -4,11 +4,11 @@
             <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6">
                 <div class="slds-text-heading--large slds-p-around--small heading-class">Contact Me</div>
                 <div class="custom-box slds-text-align_center" style="left:10%; top:50%; width:32%; position: absolute; margin-top: 30px">
-                    <lightning-input placeholder="First Name" class="inputBox" value={contactRecord.FirstName} onchange={handleFirstNameChange} style="width: 48%; float:left; clear:none;"></lightning-input>
-                    <lightning-input placeholder="Last Name" class="inputBox" value={contactRecord.LastName} onchange={handleLastNameChange} style="width: 48%; margin-left:4%; float:left; clear:none;"></lightning-input>
-                    <lightning-input placeholder="Phone" class="inputBox" value={contactRecord.MobilePhone} onchange={handlePhoneChange} style="clear: both;"></lightning-input>
-                    <lightning-input placeholder="Email" class="inputBox" value={contactRecord.Email} onchange={handleEmailChange}></lightning-input>
-                    <lightning-textarea placeholder="Description" class="inputBox" value={contactRecord.Description} onchange={handleDescribeChange}></lightning-textarea>
+                    <input id="LastName" placeholder="First Name" class="inputBox" value={contactRecord.FirstName} onchange={handleFirstNameChange} style="width: 48%; float:left; clear:none;"></input>
+                    <input placeholder="Last Name" class="inputBox" value={contactRecord.LastName} onchange={handleLastNameChange} style="width: 48%; margin-left:4%; float:left; clear:none;"></input>
+                    <input placeholder="Phone" class="inputBox" value={contactRecord.MobilePhone} onchange={handlePhoneChange} style="clear: both;"></input>
+                    <input id="Email" placeholder="Email" class="inputBox" value={contactRecord.Email} onchange={handleEmailChange}></input>
+                    <textarea placeholder="Description" class="inputBox" value={contactRecord.Description} onchange={handleDescribeChange}></textarea>
                     <lightning-button label="Send" onclick={handleSave}></lightning-button>
                 </div>
             </lightning-layout-item>
